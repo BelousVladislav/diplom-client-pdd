@@ -84,7 +84,7 @@ export class AutorizationComponent implements OnInit {
                     console.log('cookie: '+JSON.stringify(this.cookieS.getObject('thisUser')));
                     this.snackBar.open(`Вітаємо Вас, ${prsData.name} ${prsData.otchestvo}`, 'Зачинити', {duration:5000});    
                     if(thisUser.is_admin == true){
-                        this.router.navigateByUrl('thisadmin');
+                        this.router.navigateByUrl('thisadmin/users');
                     }else{
                         this.router.navigateByUrl('thisuser');
                     }

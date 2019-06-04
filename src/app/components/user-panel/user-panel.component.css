@@ -6,3 +6,12 @@
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2f/No-photo-m.png');
     background-size: cover;
 }
+
+.FormField {
+    width: 90%;
+    padding: 0 0 0 5%
+}
+
+.passHide {
+    cursor: pointer;
+}

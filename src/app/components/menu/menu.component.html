@@ -1,23 +1,52 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button>
+    <button class="d-block d-md-none" mat-icon-button>
       <mat-icon>menu</mat-icon>
   </button>
-    <a routerLink="/" mat-button>
+    <button class="d-none d-md-block" routerLink="/" mat-button>
         <i class="material-icons">home</i>
         <span style='margin-left: 10px;'>Головна</span>
-    </a>
-    <a mat-button>
+    </button>
+    <button class="d-none d-md-block" mat-button>
         <i class="material-icons">work</i>
         <span style='margin-left: 10px;'>Навчання</span>
-    </a>
-    <a mat-button>
+    </button>
+    <button class="d-none d-md-block" mat-button>
         <i class="material-icons">info</i>
         <span style='margin-left: 10px;'>Про сервіс</span>
-    </a>
+    </button>
     <div class="flex-spacer" style="flex: 1 1 auto"></div>
-    <button (click)="myAccount()" mat-button>
+    <button class="d-none d-md-block" (click)="myAccount()" mat-button>
         <i class="material-icons">face</i>
         <span style='margin-left: 10px; '>{{thisUser}}</span>
     </button>
 
 </mat-toolbar>
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-md bg-primary navbar-dark"> -->
+<!-- Brand -->
+<!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+<!-- Toggler/collapsibe Button -->
+<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+<!-- Navbar links -->
+<!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->

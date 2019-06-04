@@ -6,13 +6,37 @@
             <mat-card-subtitle>{{THisUser.login}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
-            </p>
+            <form [formGroup]="FormUserData">
+                <mat-form-field class="FormField">
+                    <input matInput formControlName="id" type="number" placeholder="ID" required>
+                </mat-form-field>
+                <mat-form-field class="FormField">
+                    <input matInput formControlName="name" type="text" placeholder="Ім'я" required>
+                </mat-form-field>
+                <mat-form-field class="FormField">
+                    <input matInput formControlName="last_name" type="text" placeholder="Прізвище" required>
+                </mat-form-field>
+                <mat-form-field class="FormField">
+                    <input matInput formControlName="otchestvo" type="text" placeholder="По батькові" required>
+                </mat-form-field>
+                <mat-form-field class="FormField">
+                    <input matInput formControlName="login" type="text" placeholder="Логін" required>
+                </mat-form-field>
+                <mat-form-field class="FormField">
+                    <input matInput placeholder="Пароль" [type]="passwHide ? 'password' : 'text'" formControlName="password">
+                    <mat-icon class='passHide' matSuffix (click)="passwHide = !passwHide">{{passwHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+            </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary">Редагувати</button>
-            <button mat-raised-button color="warn" (click)="accExit()">Вийти</button>
+            <div *ngIf="!EditMode">
+                <button (click)="edit()" mat-raised-button color="primary">Редагувати</button>
+                <button mat-raised-button color="warn" (click)="accExit()">Вийти</button>
+            </div>
+            <div *ngIf="EditMode">
+                <button (click)="save()" mat-raised-button color="primary">Зберегти</button>
+                <button (click)="cancel()" mat-raised-button color="accent">Назад</button>
+            </div>
         </mat-card-actions>
     </mat-card>
 

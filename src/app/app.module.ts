@@ -40,7 +40,8 @@ import { AdminAddAnswerComponent } from './components/admin/admin-add-answer/adm
 import { AdminEditAnswerComponent } from './components/admin/admin-edit-answer/admin-edit-answer.component';
 import { AdminListAnswerComponent } from './components/admin/admin-list-answer/admin-list-answer.component';
 import { AdminListQuestionComponent } from './components/admin/admin-list-question/admin-list-question.component';
-
+import { FooterComponent } from './components/footer/footer.component';
+import { MainComponentComponent } from './components/main-component/main-component.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,9 @@ import { AdminListQuestionComponent } from './components/admin/admin-list-questi
     AdminAddAnswerComponent,
     AdminEditAnswerComponent,
     AdminListAnswerComponent,
-    AdminListQuestionComponent
+    AdminListQuestionComponent,
+    FooterComponent,
+    MainComponentComponent
   ],
   imports: [
     BrowserModule,

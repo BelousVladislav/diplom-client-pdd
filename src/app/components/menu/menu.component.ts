@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit {
       console.log(isAdmin);
       if(isAdmin == true){
         console.log('admin');
-        this.router.navigateByUrl('/thisadmin');
+        this.router.navigateByUrl('/thisadmin/users');
       }else if(isAdmin == false){
         console.log('user');
         this.router.navigateByUrl('/thisuser');  
