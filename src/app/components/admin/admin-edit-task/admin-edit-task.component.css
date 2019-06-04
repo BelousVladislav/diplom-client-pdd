@@ -1,0 +1,7 @@
+.cardEditTask {
+    margin-top: 20px;
+}
+
+.cardEditTask>mat-card-content>form>mat-form-field {
+    width: 100%;
+}

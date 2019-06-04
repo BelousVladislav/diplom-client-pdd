@@ -1,0 +1,42 @@
+.PanelButton {
+    margin-left: 6px;
+}
+
+.PanelButtonEdit {
+    background: orange;
+}
+
+.PanelButtonAdd {
+    background: rgb(0, 196, 0);
+}
+
+.card_theme_table {
+    margin-top: 20px;
+    /* padding: 0; */
+}
+
+
+/* .card_title_theme_table {
+    background: #ECECEC;
+    padding: 15px 15px 15px 30px
+} */
+
+table {
+    width: 100%;
+}
+
+.RowHover:hover {
+    background: rgb(226, 226, 226)
+}
+
+.RowHover {
+    cursor: pointer;
+}
+
+.selectRow {
+    background: rgb(207, 207, 207);
+}
+
+.cardTool {
+    padding: 7px 15px;
+}

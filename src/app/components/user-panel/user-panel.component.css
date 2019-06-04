@@ -1,0 +1,8 @@
+.mainCardUser {
+    margin-top: 20px;
+}
+
+.example-header-image {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2f/No-photo-m.png');
+    background-size: cover;
+}

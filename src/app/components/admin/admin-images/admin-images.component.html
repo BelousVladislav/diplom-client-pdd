@@ -1,0 +1,39 @@
+<app-admin-tool (Add)="EmitAdd()" (Edit)="EmitEdit()" (Delete)="EmitDelete()" [title]="title"></app-admin-tool>
+<ng-template [ngIf]="panel_add">
+    <mat-card class="toolCard">
+        <mat-card-header>Додання картинки</mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="addImageForm">
+                <mat-form-field style="width: 80%">
+                    <input [(ngModel)]="thisURL" formControlName="url" matInput type="text" placeholder="URL картинки" required>
+                </mat-form-field>
+            </form>
+            <div class="divForImage">
+                <img style="max-width: 100%; max-height: 100%" src="{{thisURL}}" alt="">
+            </div>
+            <button (click)="ClickButtonAddImage()" style="width: 30%" mat-raised-button color="primary">Додати</button>
+        </mat-card-content>
+    </mat-card>
+</ng-template>
+<ng-template [ngIf]="panel_edit">
+    <mat-card class="toolCard">
+        <mat-card class="toolCard">
+            <mat-card-header>Редагування картинки</mat-card-header>
+            <mat-card-content>
+                <form [formGroup]="EditImageForm">
+                    <mat-form-field style="width: 80%">
+                        <input formControlName="idEdit" matInput type="number" placeholder="ID картинки" required>
+                    </mat-form-field>
+                    <mat-form-field style="width: 80%">
+                        <input [(ngModel)]="thisURL" formControlName="urlEdit" matInput type="text" placeholder="URL картинки" required>
+                    </mat-form-field>
+                </form>
+                <div class="divForImage">
+                    <img style="max-width: 100%; max-height: 100%" src="{{thisURL}}" alt="">
+                </div>
+                <button (click)="ClickButtonEditImage()" style="width: 30%" mat-raised-button color="primary">Редагувати</button>
+            </mat-card-content>
+        </mat-card>
+    </mat-card>
+</ng-template>
+<app-admin-image-list (OutSelectImage)="getSelectImage($event)"></app-admin-image-list>

@@ -1,0 +1,24 @@
+.mat-elevation-z8 {
+    width: 100%;
+    cursor: pointer;
+}
+
+.RowHover:hover {
+    background: rgb(195, 231, 255)
+}
+
+.selectRow {
+    background: rgb(143, 210, 255);
+}
+
+.f_rightFalse {
+    background: rgb(255, 195, 195)
+}
+
+.f_rightTrue {
+    background: rgb(217, 255, 195)
+}
+
+.toolAnswButton {
+    margin-left: 10px;
+}

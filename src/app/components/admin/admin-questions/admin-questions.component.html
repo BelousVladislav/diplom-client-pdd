@@ -1,0 +1,5 @@
+<app-admin-tool [title]="title" (Add)="showAddPanelF()" (Edit)="showEditPanelF()" (Delete)="deleteQuestion()"></app-admin-tool>
+<app-admin-add-question (FerfeshDataSet)="refreshDataSet()" *ngIf="showAddPanel"></app-admin-add-question>
+<app-admin-edit-question (FerfeshDataSet)="refreshDataSet()" [selQuestion]="selectedQuestion" *ngIf="showEditPanel"></app-admin-edit-question>
+<app-admin-list-question (OutSelectQuestion)="selectedQuestionF($event)"></app-admin-list-question>
+<app-admin-list-answer [selectedQuestion]="selectedQuestion" *ngIf="showAnswersList"></app-admin-list-answer>

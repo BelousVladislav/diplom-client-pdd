@@ -1,0 +1,7 @@
+.cardeditQuestion {
+    margin-top: 20px;
+}
+
+.cardeditQuestion>mat-card-content>form>mat-form-field {
+    width: 100%;
+}

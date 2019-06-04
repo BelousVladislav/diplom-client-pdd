@@ -1,0 +1,4 @@
+<app-admin-tool [title]="title" (Edit)="showEditPanelF()" (Add)="showAddPanelF()" (Delete)="deleteTask()"></app-admin-tool>
+<app-admin-add-tasks *ngIf="showAddPanel" (FerfeshDataSet)="refreshDataSet()"></app-admin-add-tasks>
+<app-admin-edit-task (FerfeshDataSet)="refreshDataSet()" [selTaskForEdit]="selectedTask" *ngIf="showEditPanel"></app-admin-edit-task>
+<app-admin-tasks-list (OutSelectTask)="selectedTaskF($event)"></app-admin-tasks-list>

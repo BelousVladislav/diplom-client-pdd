@@ -1,0 +1,24 @@
+<mat-card class="cardeditQuestion">
+    <mat-card-header>Додання питань</mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="editQuestionForm">
+            <mat-form-field>
+                <input formControlName="name" matInput type="text" placeholder="Назва" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Таск</mat-label>
+                <mat-select formControlName="Task_name">
+                    <mat-option (click)="getTaskId(state)" *ngFor="let state of Tasks" [value]="state.name">{{state.name}}</mat-option>
+                    <!-- <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option> -->
+                </mat-select>
+            </mat-form-field>
+        </form>
+        <mat-slide-toggle class="example-margin" [(ngModel)]="checked">
+            Додати картинку?
+        </mat-slide-toggle>
+        <div *ngIf="checked">
+            <app-admin-image-list (OutSelectImage)="getSelectImage($event)"></app-admin-image-list>
+        </div>
+        <button (click)="editTask()" style="display: block; margin-top: 15px; width: 100px" mat-raised-button color="primary">Редагувати</button>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,12 @@
+.mat-elevation-z8 {
+    width: 100%;
+    cursor: pointer;
+}
+
+.RowHover:hover {
+    background: rgb(195, 231, 255)
+}
+
+.selectRow {
+    background: rgb(143, 210, 255);
+}

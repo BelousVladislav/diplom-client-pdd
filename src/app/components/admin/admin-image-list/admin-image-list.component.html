@@ -1,0 +1,16 @@
+<mat-card class="mainCard">
+    <mat-card-title>
+        <h6>Картинки</h6>
+    </mat-card-title>
+    <mat-card-content>
+        <mat-grid-list cols="4" gutterSize="10px" class="imageItem">
+            <div class="list-cell" style="background: red; width: auto; height: auto;">
+                <mat-grid-tile [ngClass]="{gridTileImgSel: item == selectImage}" (click)="selImage(item)" class="list-title" *ngFor="let item of images">
+                    <mat-grid-tile-header>{{item.path}}</mat-grid-tile-header>
+                    <mat-grid-tile-footer>id: {{item.id}}</mat-grid-tile-footer>
+                    <img class="gridTileImg" src="{{item.path}}" alt="">
+                </mat-grid-tile>
+            </div>
+        </mat-grid-list>
+    </mat-card-content>
+</mat-card>

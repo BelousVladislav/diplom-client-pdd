@@ -1,0 +1,30 @@
+<!-- <div class="divAdminMenuList"> -->
+<mat-card style="box-shadow: 9px 9px 5px -1px rgba(184, 184, 184, 0.31); border:1px solid rgba(212, 212, 212, 0.31)">
+    <mat-card-content>
+        <mat-list role="list" class="adminMenuList">
+            <a routerLink="/thisadmin/users">
+                <mat-list-item role="listitem" class="adminMenuListItem"><i class="material-icons">group</i><span class="adminMenuListItemText">Користувачі</span></mat-list-item>
+            </a>
+            <a routerLink="/thisadmin/themes">
+                <mat-list-item role="listitem" class="adminMenuListItem"><i class="material-icons">assignment</i><span class="adminMenuListItemText">Теми</span></mat-list-item>
+            </a>
+            <a routerLink="/thisadmin/tasks">
+                <mat-list-item role="listitem" class="adminMenuListItem"><i class="material-icons">help_outline</i><span class="adminMenuListItemText">Таски</span></mat-list-item>
+            </a>
+            <a routerLink="/thisadmin/questions">
+                <mat-list-item role="listitem" class="adminMenuListItem"><i class="material-icons">question_answer</i><span class="adminMenuListItemText">Питання</span></mat-list-item>
+            </a>
+            <!-- <a routerLink="/thisadmin/history">
+                <mat-list-item role="listitem" class="adminMenuListItem"><i class="material-icons">history</i><span class="adminMenuListItemText">Історія</span></mat-list-item>
+            </a> -->
+            <a routerLink="/thisadmin/images">
+                <mat-list-item role="listitem" class="adminMenuListItem"><i class="material-icons">collections</i><span class="adminMenuListItemText">Картинки</span></mat-list-item>
+            </a>
+            <a (click)="accExit()">
+                <mat-list-item role="listitem" class="aExit"><i class="material-icons">exit_to_app</i><span class="adminMenuListItemText">Вийти</span></mat-list-item>
+            </a>
+            <!-- <button mat-raised-button color="warn" (click)="accExit()">Exit</button> -->
+        </mat-list>
+    </mat-card-content>
+</mat-card>
+<!-- </div> -->

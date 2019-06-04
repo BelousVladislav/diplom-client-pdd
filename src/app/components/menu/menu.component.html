@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+  </button>
+    <a routerLink="/" mat-button>
+        <i class="material-icons">home</i>
+        <span style='margin-left: 10px;'>Головна</span>
+    </a>
+    <a mat-button>
+        <i class="material-icons">work</i>
+        <span style='margin-left: 10px;'>Навчання</span>
+    </a>
+    <a mat-button>
+        <i class="material-icons">info</i>
+        <span style='margin-left: 10px;'>Про сервіс</span>
+    </a>
+    <div class="flex-spacer" style="flex: 1 1 auto"></div>
+    <button (click)="myAccount()" mat-button>
+        <i class="material-icons">face</i>
+        <span style='margin-left: 10px; '>{{thisUser}}</span>
+    </button>
+
+</mat-toolbar>

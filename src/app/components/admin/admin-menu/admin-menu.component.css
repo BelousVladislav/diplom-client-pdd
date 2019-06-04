@@ -1,0 +1,31 @@
+.adminMenuList {
+    cursor: pointer;
+}
+
+.adminMenuListItem {
+    height: 10px;
+    color: #708E8D;
+}
+
+.adminMenuList :hover {
+    background: rgb(230, 230, 230);
+}
+
+.adminMenuList>a {
+    text-decoration: none;
+}
+
+mat-card {
+    padding: 10px 0 10px 0;
+    box-shadow: 9px 9px 5px -1px rgba(184, 184, 184, 0.31)
+}
+
+.adminMenuListItemText {
+    margin-left: 6px;
+}
+
+.aExit {
+    background: rgb(255, 92, 92);
+    color: rgb(255, 255, 255);
+    height: 10px;
+}

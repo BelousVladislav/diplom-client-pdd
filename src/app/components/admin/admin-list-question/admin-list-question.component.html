@@ -1,0 +1,21 @@
+<mat-card style="margin-top: 20px">
+    <mat-card-header>Питання</mat-card-header>
+    <mat-card-content>
+        <mat-form-field style="width:100%">
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Фільтр">
+        </mat-form-field>
+        <table mat-table [dataSource]='DataSource' class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Ім'я </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr class="RowHover" [ngClass]="{'selectRow': row==selectedQuestion}" (click)="selectQuestion(row)" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </mat-card-content>
+</mat-card>
