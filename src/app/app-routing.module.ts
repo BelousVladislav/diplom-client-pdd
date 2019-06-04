@@ -11,6 +11,8 @@ import { AdminTasksComponent } from './components/admin/admin-tasks/admin-tasks.
 import { AdminQuestionsComponent } from './components/admin/admin-questions/admin-questions.component';
 import { AdminHistoryComponent } from './components/admin/admin-history/admin-history.component';
 import { AdminImagesComponent } from './components/admin/admin-images/admin-images.component'
+import { OurPageComponent } from './components/our-page/our-page.component';
+import { StudyPageComponent } from './components/study-page/study-page.component'
 
 const adminMenuRoutes: Routes = [
   {path:'users', component: AdminUsersComponent},
@@ -25,6 +27,8 @@ const adminMenuRoutes: Routes = [
 const routes: Routes = [
   // {path:'', component: HomeComponent},
    {path:'', component: MainComponentComponent},
+   {path:'study', component: StudyPageComponent},
+   {path:'our', component: OurPageComponent},
    {path:'autorization', component: AutorizationComponent},
    {path:'thisuser', component: UserPanelComponent},
    {path:'thisadmin', component: AdminPanelComponent},

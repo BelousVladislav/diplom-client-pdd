@@ -42,6 +42,8 @@ import { AdminListAnswerComponent } from './components/admin/admin-list-answer/a
 import { AdminListQuestionComponent } from './components/admin/admin-list-question/admin-list-question.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponentComponent } from './components/main-component/main-component.component';
+import { OurPageComponent } from './components/our-page/our-page.component';
+import { StudyPageComponent } from './components/study-page/study-page.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import { MainComponentComponent } from './components/main-component/main-compone
     AdminListAnswerComponent,
     AdminListQuestionComponent,
     FooterComponent,
-    MainComponentComponent
+    MainComponentComponent,
+    OurPageComponent,
+    StudyPageComponent
   ],
   imports: [
     BrowserModule,
