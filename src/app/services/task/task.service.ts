@@ -18,7 +18,7 @@ export class TaskService {
     }else{
       url = cancatHostPost+`/tasks?theme_id=${theme_id}`; 
     }
-    return this.http.get(url);
+    return this.http.get<task[]>(url);
 
   }
   addTask(newTask: task){

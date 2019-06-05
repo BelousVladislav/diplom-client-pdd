@@ -1,3 +1,2 @@
-<p>
-  study-page works!
-</p>
+<app-study-themes-list (OutTheme)="selectThemeFromChild($event)" *ngIf="showThemesList"></app-study-themes-list>
+<app-study-tasks (OutExit)="closeTasks()" [thisTheme]="selInChildTheme" *ngIf="showTasks"></app-study-tasks>

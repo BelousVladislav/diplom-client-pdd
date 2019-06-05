@@ -1,4 +1,4 @@
-const ServerHost: string = 'http://10.10.10.184'
+const ServerHost: string = 'http://192.168.0.103'
 // 'http://192.168.0.104';
 // 'http://10.10.10.184';
 const ServerPort: string = '8080';

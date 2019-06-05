@@ -1,0 +1,29 @@
+<div class="container main_card_study">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h5>Оберіть тему</h5>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content *ngIf="load">
+            <div class="container-fluid">
+                <mat-list class="mtList">
+                    <mat-list-item (click)="selectTheme(item)" class="mtItem" *ngFor="let item of themes">
+                        {{item.name}}
+                        <div class="flex-spacer" style="flex: 1 1 auto"></div>
+                        <div class="d-none d-md-block">
+                            <ul style="margin-bottom: 0; color: rgb(177, 177, 177)">
+                                <li class="starItem"><i class="material-icons starItemImg">star_rate</i></li>
+                                <li class="starItem"><i class="material-icons starItemImg">star_rate</i></li>
+                                <li class="starItem"><i class="material-icons starItemImg">star_rate</i></li>
+                                <li class="starItem"><i class="material-icons starItemImg">star_rate</i></li>
+                                <li class="starItem"><i class="material-icons starItemImg">star_rate</i></li>
+                            </ul>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+        </mat-card-content>
+        <img *ngIf="!load" src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" class="img-fluid rounded mx-auto d-block">
+    </mat-card>
+</div>

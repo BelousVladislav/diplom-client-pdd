@@ -32,7 +32,7 @@ export class AdminAddThemeComponent implements OnInit {
   }
   ngOnInit() {
     this.addThemeForm = this._formBuilder.group({
-      themeName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]]
+      themeName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(300)]]
     });
   }
 

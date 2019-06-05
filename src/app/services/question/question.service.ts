@@ -17,7 +17,7 @@ export class QuestionService {
     }else{
       url = cancatHostPost+`/questions?task_id=${task_id}`; 
     }
-    return this.http.get(url);
+    return this.http.get<question[]>(url);
   }
   addQuestion(newQuestion: question){
     return this.http.post(cancatHostPost+'/questions/add', JSON.stringify(newQuestion), this.headerJSN); 

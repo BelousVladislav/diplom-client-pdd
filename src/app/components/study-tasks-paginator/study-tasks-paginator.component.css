@@ -1,0 +1,9 @@
+.prev,
+.next {
+    padding: 3.6px 15px;
+    cursor: pointer;
+}
+
+.lnk {
+    cursor: pointer;
+}

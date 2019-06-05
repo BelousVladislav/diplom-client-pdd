@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { cancatHostPost } from '../../const';
-
+import { image } from '../../classes/image'
 @Injectable({
   providedIn: 'root'
 })
@@ -10,8 +10,14 @@ export class ImageService {
   constructor(
     private http:HttpClient
   ) { }
-  getImages(){
-    return this.http.get(cancatHostPost+'/get_images');
+  getImages(image_id?: number){
+    let url: string='';
+    if (image_id==undefined){
+      url = cancatHostPost+'/get_images';
+    }else{
+      url = cancatHostPost+`/get_images?id=${image_id}`; 
+    }
+    return this.http.get<image[]>(url);
   }
   addImage(pathp: string){
     console.log(pathp)

@@ -1,9 +1,9 @@
 .adminMenuList {
+    height: 296px;
     cursor: pointer;
 }
 
 .adminMenuListItem {
-    height: 10px;
     color: #708E8D;
 }
 
@@ -27,5 +27,4 @@ mat-card {
 .aExit {
     background: rgb(255, 92, 92);
     color: rgb(255, 255, 255);
-    height: 10px;
 }

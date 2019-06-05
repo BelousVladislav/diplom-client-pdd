@@ -44,6 +44,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponentComponent } from './components/main-component/main-component.component';
 import { OurPageComponent } from './components/our-page/our-page.component';
 import { StudyPageComponent } from './components/study-page/study-page.component';
+import { NavComponent } from './components/nav/nav.component';
+import { StudyThemesListComponent } from './components/study-themes-list/study-themes-list.component';
+import { StudyTasksComponent } from './components/study-tasks/study-tasks.component';
+import { StudyTasksPaginatorComponent } from './components/study-tasks-paginator/study-tasks-paginator.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +81,11 @@ import { StudyPageComponent } from './components/study-page/study-page.component
     FooterComponent,
     MainComponentComponent,
     OurPageComponent,
-    StudyPageComponent
+    StudyPageComponent,
+    NavComponent,
+    StudyThemesListComponent,
+    StudyTasksComponent,
+    StudyTasksPaginatorComponent
   ],
   imports: [
     BrowserModule,

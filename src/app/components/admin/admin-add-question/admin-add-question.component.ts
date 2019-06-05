@@ -31,7 +31,7 @@ export class AdminAddQuestionComponent implements OnInit {
 
   ngOnInit() {
     this.addQuestionForm = this._FormB.group({
-      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(300)]],
       Task_name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(200)]]
     });
     this.getTasks()

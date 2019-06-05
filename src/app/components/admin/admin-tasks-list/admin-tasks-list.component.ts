@@ -15,7 +15,7 @@ export class AdminTasksListComponent implements OnInit {
   tasks: task[] = [];
   selectedTask: task;
   DataSource: MatTableDataSource<task>;
-  displayedColumns: string[] = ['id', 'name', 'text'];
+  displayedColumns: string[] = ['id', 'name'];
   constructor(
     private TaskS:TaskService,
     private route: ActivatedRoute

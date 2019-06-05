@@ -33,7 +33,7 @@ export class AdminEditTaskComponent implements OnInit {
   ngOnInit() {
     this.getThemes();
     this.editTaskForm = this._FormB.group({
-      name: [this.selTaskForEdit.name, [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
+      name: [this.selTaskForEdit.name, [Validators.required, Validators.minLength(2), Validators.maxLength(300)]],
       theme_name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(200)]],
       text: [this.selTaskForEdit.text, [Validators.required, Validators.minLength(2)]],
     });

@@ -18,7 +18,7 @@ export class AnswerService {
     }else{
       url = cancatHostPost+`/answers?question_id=${Question_id}`; 
     }
-    return this.http.get(url);
+    return this.http.get<answer[]>(url);
   }
   addAnswer(newAnswer: answer){
     return this.http.post(cancatHostPost+'/answer/add', JSON.stringify(newAnswer), this.headerJSN); 

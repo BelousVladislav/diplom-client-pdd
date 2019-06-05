@@ -35,7 +35,7 @@ export class AdminListAnswerComponent implements OnInit {
   ngOnInit() {
     this.refreshDataSet(this.selectedQuestion.id);
     this.addEditAnswerForm = this._FormBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(300)]],
       istruef: [false, [Validators.required]],
 
     });
@@ -45,7 +45,7 @@ export class AdminListAnswerComponent implements OnInit {
       this.Answers = data;
       this.DataSource = new MatTableDataSource(this.Answers);
       this.DataSource.paginator = this.paginator;
-      console.log(this.selectedQuestion.name);
+      console.log(this.Answers);
     })
   };
   selectAnswer(tsk: answer){

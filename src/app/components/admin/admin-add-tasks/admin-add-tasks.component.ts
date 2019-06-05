@@ -31,7 +31,7 @@ export class AdminAddTasksComponent implements OnInit {
 
   ngOnInit() {
     this.addTaskForm = this._FormB.group({
-      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(300)]],
       theme_name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(200)]],
       text: ['', [Validators.required, Validators.minLength(2)]],
 
