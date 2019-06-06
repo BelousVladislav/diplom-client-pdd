@@ -1,3 +1,14 @@
 .mainCard {
     margin-top: 20px;
 }
+
+.taskText {
+    padding: 10px 3%;
+    border: 1px solid rgb(173, 173, 173);
+    margin-top: 15px;
+    box-shadow: 7px 7px 5px -3px rgba(161, 161, 161, 0.44)
+}
+
+.ImageTask {
+    max-height: 400px;
+}

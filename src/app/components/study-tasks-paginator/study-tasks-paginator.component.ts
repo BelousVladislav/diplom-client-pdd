@@ -9,12 +9,14 @@ export class StudyTasksPaginatorComponent implements OnInit {
   @Input() countPage: number;
   @Output() OutPage = new EventEmitter();
   PageArray: number[] = [];
-  thisPage: number;
+  thisPage: number = 0;
+  // activePage: number;
   constructor() { }
   selectPage(sel: number){
     if(sel>=0 && sel<this.countPage){
       this.thisPage = sel;
       this.OutPage.emit(this.thisPage);
+      // this.activePage = sel;
       console.log(this.thisPage)
     }
   }

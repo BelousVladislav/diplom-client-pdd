@@ -9,17 +9,18 @@
             </mat-card-title>
             <mat-card-subtitle><b>{{thisTaskName}}</b></mat-card-subtitle>
         </mat-card-header>
-        <img src="{{thisTaskImageUrl}}" class="img-fluid rounded mx-auto d-block">
+        <img class="ImageTask" src="{{thisTaskImageUrl}}" class="img-fluid rounded mx-auto d-block">
         <!-- <img mat-card-image src="{{thisTaskImageUrl}}"> -->
         <mat-card-content *ngIf="load">
-            <p>
+            <p class="taskText">
                 {{thisTaskText}}
             </p>
         </mat-card-content>
         <img *ngIf="!load && !ops" src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" class="img-fluid rounded mx-auto d-block">
         <img *ngIf="ops" src="https://lh6.googleusercontent.com/proxy/rvkZ2bZsrn6_jjyJUIgsnXjqjGF1HIkktQCK3bKusuONK-UtwodMtw_qOSeyP5_CHKdmh3Nyr1kEnPpIJvqt4x5Mi9CW2Ua06_7dLetifJOFNCSvSu62ZAYYF7EcItbSUcaz6Hrcj8Tv1Auoex7d=s0-d" class="img-fluid rounded mx-auto d-block">
         <mat-card-actions>
-            <button (click)="exit()" mat-raised-button color="accent">Повернутися</button>
+            <button (click)="exit()" mat-raised-button color="warn">Вийти</button>
+            <button *ngIf="load && pos==tasksCount-1" mat-raised-button color="primary">Тестування</button>
         </mat-card-actions>
     </mat-card>
 </div>

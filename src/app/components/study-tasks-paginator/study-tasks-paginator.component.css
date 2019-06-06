@@ -7,3 +7,11 @@
 .lnk {
     cursor: pointer;
 }
+
+.pagItem>* {
+    border: none;
+}
+
+.UlPginator {
+    margin: 0
+}

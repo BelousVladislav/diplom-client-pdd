@@ -1,7 +1,7 @@
 <nav aria-label="Page navigation example">
-    <ul class="pagination">
-        <li class="page-item" (click)="prevPage()"><a class="page-link prev"><i class="material-icons">navigate_before</i></a></li>
-        <li class="page-item lnk" (click)="selectPage(item)" *ngFor="let item of PageArray"><a class="page-link">{{item+1}}</a></li>
-        <li class="page-item" (click)="nextPage()"><a class="page-link next"><i class="material-icons">navigate_next</i></a></li>
+    <ul class="pagination justify-content-center UlPginator">
+        <li class="page-item pagItem" (click)="prevPage()"><a class="page-link prev"><i class="material-icons">navigate_before</i></a></li>
+        <li class="page-item lnk pagItem" [ngClass]="{'active': item==thisPage}" (click)="selectPage(item)" *ngFor="let item of PageArray"><a class="page-link">{{item+1}}</a></li>
+        <li class="page-item pagItem" (click)="nextPage()"><a class="page-link next"><i class="material-icons">navigate_next</i></a></li>
     </ul>
 </nav>

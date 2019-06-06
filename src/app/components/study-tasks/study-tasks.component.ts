@@ -44,9 +44,9 @@ export class StudyTasksComponent implements OnInit {
       this.thisTheme.tasks[i].questions = await this.getQuestions(this.thisTheme.tasks[i].id);
         for(let j: number = 0; j<this.thisTheme.tasks[i].questions.length; j++){
           this.thisTheme.tasks[i].questions[j].answers = await this.getAnswers(this.thisTheme.tasks[i].questions[j].id);
-          this.thisTheme.tasks[i].questions[j].imageObj = await this.getImages(this.thisTheme.tasks[i].questions[j].image_id);
+          this.thisTheme.tasks[i].questions[j].imageObj = await this.getImages(this.thisTheme.tasks[i].questions[j].image_id!=null? this.thisTheme.tasks[i].questions[j].image_id: 27);
         }
-      this.thisTheme.tasks[i].imageObj = await this.getImages(this.thisTheme.tasks[i].image_id!=null? this.thisTheme.tasks[i].image_id: 0);
+      this.thisTheme.tasks[i].imageObj = await this.getImages(this.thisTheme.tasks[i].image_id!=null? this.thisTheme.tasks[i].image_id: 27);
     }
     console.log(this.thisTheme);
     if (this.thisTheme.tasks.length>0){
