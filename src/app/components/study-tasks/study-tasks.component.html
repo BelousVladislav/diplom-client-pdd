@@ -1,8 +1,5 @@
-<div class="container mainCard">
+<div *ngIf="!showTests" class="container mainCard">
     <mat-card>
-        <mat-card-actions *ngIf="load" style="padding: 0; margin:0;">
-            <app-study-tasks-paginator (OutPage)="EditPos($event)" [countPage]="tasksCount"></app-study-tasks-paginator>
-        </mat-card-actions>
         <mat-card-header>
             <mat-card-title>
                 <h5>{{thisThemeName}}</h5>
@@ -18,9 +15,13 @@
         </mat-card-content>
         <img *ngIf="!load && !ops" src="https://cdn.dribbble.com/users/1726478/screenshots/3781908/car-dealer-loader-gif.gif" class="img-fluid rounded mx-auto d-block">
         <img *ngIf="ops" src="https://lh6.googleusercontent.com/proxy/rvkZ2bZsrn6_jjyJUIgsnXjqjGF1HIkktQCK3bKusuONK-UtwodMtw_qOSeyP5_CHKdmh3Nyr1kEnPpIJvqt4x5Mi9CW2Ua06_7dLetifJOFNCSvSu62ZAYYF7EcItbSUcaz6Hrcj8Tv1Auoex7d=s0-d" class="img-fluid rounded mx-auto d-block">
+        <mat-card-actions *ngIf="load" style="padding: 0; margin:0;">
+            <app-study-tasks-paginator (OutPage)="EditPos($event)" [countPage]="tasksCount"></app-study-tasks-paginator>
+        </mat-card-actions>
         <mat-card-actions>
             <button (click)="exit()" mat-raised-button color="warn">Вийти</button>
-            <button *ngIf="load && pos==tasksCount-1" mat-raised-button color="primary">Тестування</button>
+            <button (click)="buttonTests()" *ngIf="load && pos==tasksCount-1" mat-raised-button color="primary">Тестування</button>
         </mat-card-actions>
     </mat-card>
 </div>
+<app-study-tests [thisThemeForTests]="thisTheme" *ngIf="showTests"></app-study-tests>

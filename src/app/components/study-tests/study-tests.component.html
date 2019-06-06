@@ -1,0 +1,26 @@
+<div class="container mainDivTests">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{themeName}}</mat-card-title>
+        </mat-card-header>
+        <img class="ImageTask" src="{{questionUrl}}" class="img-fluid rounded mx-auto d-block">
+        <mat-card-content>
+            <p class="taskText">
+                {{questionText}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="container">
+                <div class="row" style="box-shadow: 3px 3px 5px -3px rgba(161, 161, 161, 0.44)">
+                    <a *ngFor="let item of answers" [ngClass]="{'col-lg-6': answers.length==4, 'col-lg-12': answers.length<4}" class="btnAnswer">{{item.name}}</a>
+                </div>
+            </div>
+        </mat-card-actions>
+        <mat-card-actions style="padding: 0; margin:0;">
+            <app-study-tasks-paginator (OutPage)="newPos($event)" [countPage]="questions.length"></app-study-tasks-paginator>
+        </mat-card-actions>
+        <mat-card-actions>
+            <button mat-raised-button color="warn">Вийти</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

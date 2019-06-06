@@ -1,0 +1,26 @@
+.mainDivTests {
+    margin-top: 20px;
+}
+
+.btnAnswer {
+    /* margin: 0;
+    padding: 0; */
+    border: 1px solid rgb(241, 241, 241);
+    padding: 7px;
+    text-align: center;
+    cursor: pointer;
+    /* border-radius: 5px; */
+}
+
+.btnAnswer:hover {
+    background: rgb(238, 238, 238);
+}
+
+.taskText {
+    padding: 10px 3%;
+    font-size: 16px;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(228, 228, 228);
+    margin-top: 15px;
+    box-shadow: 3px 3px 5px -3px rgba(161, 161, 161, 0.44)
+}

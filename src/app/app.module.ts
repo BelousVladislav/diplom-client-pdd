@@ -48,6 +48,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { StudyThemesListComponent } from './components/study-themes-list/study-themes-list.component';
 import { StudyTasksComponent } from './components/study-tasks/study-tasks.component';
 import { StudyTasksPaginatorComponent } from './components/study-tasks-paginator/study-tasks-paginator.component';
+import { StudyTestsComponent } from './components/study-tests/study-tests.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { StudyTasksPaginatorComponent } from './components/study-tasks-paginator
     NavComponent,
     StudyThemesListComponent,
     StudyTasksComponent,
-    StudyTasksPaginatorComponent
+    StudyTasksPaginatorComponent,
+    StudyTestsComponent
   ],
   imports: [
     BrowserModule,

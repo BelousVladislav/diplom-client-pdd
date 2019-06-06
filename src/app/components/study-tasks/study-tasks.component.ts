@@ -28,6 +28,7 @@ export class StudyTasksComponent implements OnInit {
   load: boolean = false;
   ops: boolean = false;
   tasksCount: number = 0;
+  showTests = false;
   constructor(
     private ThemeS:ThemeService,
     private TaskS:TaskService,
@@ -97,5 +98,8 @@ export class StudyTasksComponent implements OnInit {
   }  
   exit(){
     this.OutExit.emit();
+  }
+  buttonTests(){
+    this.showTests = true;
   }
 }
