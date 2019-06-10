@@ -97,7 +97,7 @@ import { StudyTestsComponent } from './components/study-tests/study-tests.compon
     ReactiveFormsModule,
     AppMaterialModule,
     HttpClientModule,
-    CKEditorModule,
+    CKEditorModule
   ],
   providers: [CookieService, UserService, ThemeService],
   bootstrap: [AppComponent]

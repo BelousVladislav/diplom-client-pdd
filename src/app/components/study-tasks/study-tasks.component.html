@@ -1,4 +1,4 @@
-<div *ngIf="!showTests" class="container mainCard">
+<div *ngIf="!showTests && !showResult" class="container mainCard">
     <mat-card>
         <mat-card-header>
             <mat-card-title>
@@ -24,4 +24,4 @@
         </mat-card-actions>
     </mat-card>
 </div>
-<app-study-tests [thisThemeForTests]="thisTheme" *ngIf="showTests"></app-study-tests>
+<app-study-tests (TestEnd)="EndTest()" [thisThemeForTests]="thisTheme" *ngIf="showTests && !showResult"></app-study-tests>

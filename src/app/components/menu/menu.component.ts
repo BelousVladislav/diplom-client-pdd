@@ -8,12 +8,16 @@ import {Router} from '../../../../node_modules/@angular/router';
 })
 export class MenuComponent implements OnInit {
   thisUser = 'Мій кабінет';
+  showMenu = false;
   constructor(
     private cookieS:CookieService,
     private router:Router
   ) { }
 
   ngOnInit() {
+  }
+  slideMenu(){
+    this.showMenu = !this.showMenu
   }
   myAccount(){
     //this.cookieS.remove('thisUser');
@@ -32,5 +36,6 @@ export class MenuComponent implements OnInit {
     }else{
       this.router.navigateByUrl('/autorization');  
     }
+    this.slideMenu()
   }
 }

@@ -57,10 +57,10 @@
                                     <input matInput placeholder="Логін" formControlName="login" required>
                                 </mat-form-field>
                                 <mat-form-field>
-                                    <input matInput placeholder="Пароль" formControlName="password" required>
+                                    <input matInput placeholder="Пароль" [type]="'password'" formControlName="password" required>
                                 </mat-form-field>
                                 <mat-form-field>
-                                    <input matInput placeholder="Повторіть пароль" formControlName="pconfirm" required>
+                                    <input matInput placeholder="Повторіть пароль" [type]="'password'" formControlName="pconfirm" required>
                                 </mat-form-field>
                                 <div>
                                     <button mat-button matStepperPrevious>Назад</button>

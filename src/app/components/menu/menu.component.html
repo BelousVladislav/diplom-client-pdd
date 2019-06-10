@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
-    <button class="d-block d-md-none" mat-icon-button>
+    <button (click)="slideMenu()" class="d-block d-md-none" mat-icon-button>
       <mat-icon>menu</mat-icon>
   </button>
     <button class="d-none d-md-block" routerLink="/" mat-button>
-        <i class="material-icons">home</i>
+        <i  class="material-icons">home</i>
         <span style='margin-left: 10px;'>Головна</span>
     </button>
     <button routerLink="/study" class="d-none d-md-block" mat-button>
@@ -20,6 +20,31 @@
         <span style='margin-left: 10px; '>{{thisUser}}</span>
     </button>
 </mat-toolbar>
+<mat-list *ngIf="showMenu" style="background: #3F51B5; color: white">
+    <mat-list-item style="color: white">
+        <button routerLink="/" (click)="slideMenu()" mat-button>
+                <i class="material-icons">home</i>
+                <span style='margin-left: 10px;'>Головна</span>
+            </button></mat-list-item>
+    <mat-list-item style="color: white">
+        <button routerLink="/study" (click)="slideMenu()" mat-button>
+                <i class="material-icons">work</i>
+                <span style='margin-left: 10px;'>Навчання</span>
+            </button>
+    </mat-list-item>
+    <mat-list-item style="color: white">
+        <button routerLink="/our" (click)="slideMenu()" mat-button>
+                <i class="material-icons">info</i>
+                <span style='margin-left: 10px;'>Про сервіс</span>
+            </button>
+    </mat-list-item>
+    <mat-list-item style="color: white">
+        <button (click)="myAccount()" mat-button>
+                    <i class="material-icons">face</i>
+                    <span style='margin-left: 10px; '>{{thisUser}}</span>
+                </button>
+    </mat-list-item>
+</mat-list>
 
 
 

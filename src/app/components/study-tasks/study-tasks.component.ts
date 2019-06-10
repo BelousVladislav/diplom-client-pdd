@@ -29,6 +29,7 @@ export class StudyTasksComponent implements OnInit {
   ops: boolean = false;
   tasksCount: number = 0;
   showTests = false;
+  showResult = false;
   constructor(
     private ThemeS:ThemeService,
     private TaskS:TaskService,
@@ -63,6 +64,9 @@ export class StudyTasksComponent implements OnInit {
       this.MatSnackBar.open(`Розділ "${this.thisTheme.name}" тимчасово знаходиться в стані розробки`, 'Зачинити', {duration:5000})
     }
     
+  }
+  EndTest(){
+    this.showTests = false;
   }
   EditPos(poss: number){
     this.pos = poss;
